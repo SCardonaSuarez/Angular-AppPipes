@@ -1,9 +1,22 @@
-<h1>{{ nombre |titlecase}}</h1>
-<h1>{{ valor |number}}</h1>
-<h1>{{ obj |json}}</h1>
 
+<div class="text-layout">
+  <h1>{{ nombre |titlecase}}</h1>
+  <h1>{{ valor |number}}</h1>
+  <h1>{{ obj |json}}</h1>
 
+</div>
 
-<button (click)="mostrarNombre()">
-  Chage Name
+<button 
+  pButton (click)="mostrarNombre()"
+  class="p-button-warning"
+  icon="pi pi-bell"
+  iconPos="right"
+  label="Cambiar Nombre" 
+  >
 </button>
+
+
+<p-card [header]="nombre |titlecase"
+        subheader= "Esto es un subheader">
+  Content
+</p-card>
